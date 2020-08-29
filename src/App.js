@@ -1,7 +1,38 @@
-import React from 'react';
+import React , { useState }  from 'react';
 import logo from './logo.svg';
 import './App.css';
 import profile_pic from './images/profile_pic.png'
+import chat_data from './Data/chat_data.json'
+
+const Chatheads = (({chatheadsdata}) => {
+  const [chatheadsdata1,handlechatsdata] = useState(chatheadsdata)
+
+  function To_map(){
+    const mp = chatheadsdata1.friend.map( (t) =>
+      <div className='chat-head-2 d-flex flex-row chatheads'>
+        <div className='ml-2'>
+          <img src={t.profilepic} height='30px'></img>
+        </div>
+        <div className='ml-2'>
+          {t.fname}
+        </div>
+      </div>
+    )
+    return mp
+  }
+  if(chatheadsdata1 == null){
+    return(
+      <div>
+        No Chat Available
+      </div>
+    )
+  }else{
+    return(
+        <To_map />
+    )
+  }
+  
+})
 
 function App() {
   return (
@@ -14,41 +45,7 @@ function App() {
               </div>
             </div>
             <div>
-              <div className='mt-2 mb-2 chat-head-2'>
-                <div className='ml-2'>
-                    Alice
-                </div>
-              </div>
-              <div className='mt-2 mb-2 chat-head-2'>
-                <div className='ml-2'>
-                    John
-                </div>
-              </div>
-              <div className='mt-2 mb-2 chat-head-2'>
-                <div className='ml-2'>
-                    Sam
-                </div>
-              </div>
-              <div className='mt-2 mb-2 chat-head-2'>
-                <div className='ml-2'>
-                    Aster
-                </div>
-              </div>
-              <div className='mt-2 mb-2 chat-head-2'>
-                <div className='ml-2'>
-                    Tom
-                </div>
-              </div>
-              <div className='mt-2 mb-2 chat-head-2'>
-                <div className='ml-2'>
-                    Dexter
-                </div>
-              </div>
-              <div className='mt-2 mb-2 chat-head-2'>
-                <div className='ml-2'>
-                    Dexter
-                </div>
-              </div>
+              <Chatheads chatheadsdata={chat_data} />
             </div>
           </div>
           <div className='col-9 p-0 primarycolor4 overflow-auto'>

@@ -14,6 +14,9 @@ html, body {
 .chat-head-containter{
   overflow-y:scroll
 }
+.chatheads:hover{
+  background-color:#00fff0;
+}
 .border-gray{
   border-right: 1px solid #fafaf6;
 }
