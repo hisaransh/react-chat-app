@@ -1,0 +1,43 @@
+.alatafont{
+  font-family: 'Alata', sans-serif;
+}
+html, body {
+  height: 100vh;
+}
+.chat-head{
+  /* border-bottom: 1px solid black; */
+  font-size: 24px;
+  height:60px;
+  align-items: center;
+  display: flex;
+}
+.chat-head-containter{
+  overflow-y:scroll
+}
+.border-gray{
+  border-right: 1px solid #fafaf6;
+}
+.chat-head-2{
+  border-bottom: 1px solid black;
+  height: 42px;
+  font-size: 20px;
+}
+.chatbox-header{
+  height:60px
+}
+.primarycolor1{
+  background:#3d6cb9;
+}
+.primarycolor2{
+  background:#00d1ff;
+}
+.primarycolor3{
+  background:#00fff0;
+}
+.primarycolor4{
+  background:#fafaf6;
+}
+.message-input-send{
+  position: absolute;
+  bottom:2px
+}
