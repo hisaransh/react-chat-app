@@ -1,18 +1,22 @@
 .leftone{   
     background-color: #3d6cb9;
     width: fit-content;
-    padding: 20px;
+    padding: 15px;
     margin-top: 2px;
     color: white;
     border-radius: 101px;
     left: 2px;
+    font-size: 12px;
 }
 
 .rightone{
     background-color: #3d6cb9;
     width: fit-content;
-    padding: 20px;
+    padding: 15px;
     margin-top: 2px;
     color: white;
     border-radius: 101px;
+    font-size: 12px;
+    /* float:right; */
+    
 }

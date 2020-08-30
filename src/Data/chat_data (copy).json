@@ -33,79 +33,19 @@
       "id": 2,
       "fname": "John",
       "profilepic": "https://i.ibb.co/m5jxSpf/avataaars-1.png",
-      "lastseen": "4:56 PM",
-      "message": [
-        {
-          "send":1,
-          "msg":"Hii Man"
-        },{
-          "send":1,
-          "msg":"when will you send me the money"
-        },{
-          "send":1,
-          "msg":"It's been 3 months"
-        },{
-          "send":0,
-          "msg":"Yes yes "
-        },
-        {
-          "send":0,
-          "msg":"I forgot "
-        },
-        {
-          "send":0,
-          "msg":"Sending you immediately "
-        },
-        {
-          "send":0,
-          "msg": "I have send it to you please check"
-        },
-        {
-          "send":1,
-          "msg":"Yes i got it thanks"
-        },{
-          "send":1,
-          "msg":"Pizza tonight ?🍕"
-        },{
-          "send":0,
-          "msg":"I am out of town tonight"
-        },{
-          "send":0,
-          "msg":"Ask alice"
-        },{
-          "send":0,
-          "msg":"She was also asking me"
-        }
-        ]
+      "lastseen": "4:56 PM"
     },
     {
       "id": 3,
       "fname": "Sam",
       "profilepic": "https://i.ibb.co/r5pvTQn/avataaars-2.png",
       "lastseen": "online"
-      
     },
     {
       "id": 4,
       "fname": "Aster",
       "profilepic": "https://i.ibb.co/Q7VMXLx/avataaars-3.png",
-      "lastseen": "9:23 AM",
-      "message": [
-        {
-          "send":"0",
-          "msg" : "Send me the notes"
-        },{
-          "send":"1",
-          "msg":"Already email you"
-        },{
-          "send":"0",
-          "msg":"Please send again"
-        },
-        {
-          "send":"0",
-          "msg":"I Think i lost it in between"
-        }
-        ]
+      "lastseen": "9:23 AM"
     },
     {
       "id": 5,

@@ -4,6 +4,118 @@ import './Bubble.css'
 import profile_pic from './images/profile_pic.png'
 import chat_data from './Data/chat_data.json'
 import Bubble from './Bubble'
+
+const ChatBubble = ( ({CSData}) => {
+  const [chatsdata,handlechatsdata] = useState(CSData)
+  console.log("CHATS DATA",chatsdata)
+  useEffect(()=>{
+    handlechatsdata(CSData)
+  },[CSData])
+
+  function ToMap(){
+    const mp = chatsdata.message.map((x) => (
+      <div>
+        {x.send==0
+        ? <div className="leftone">{x.msg}</div>
+        : <div style={{display:'flex',justifyContent:'flex-end'}}><div className="rightone">{x.msg}</div></div>
+        }
+      </div>
+    )
+    )
+    return mp
+  }
+
+  if(chatsdata == null || chatsdata.message == null || chatsdata.message.length == 0){
+    return(
+      <div>
+        No chats
+      </div>
+    )
+  }else{
+    return(
+      <div style={{padding:'10px',height:'75vh',overflowY:'scroll',display:'flex',flexDirection:'column'}}>
+        <ToMap/>
+              {/* <div>
+                  <div className="leftone">
+                      Hii How are you
+                  </div>
+              </div>
+              <div style={{display:'flex',justifyContent:'flex-end'}}>
+                  <div className="rightone">
+                      I am fine
+                  </div>
+              </div>
+              <div>
+                  <div className="leftone">
+                      Whats up
+                  </div>
+              </div>
+              <div>
+                  <div className="leftone">
+                      Hii How are you
+                  </div>
+              </div>
+              <div style={{display:'flex',justifyContent:'flex-end'}}>
+                  <div className="rightone">
+                      I am fine
+                  </div>
+              </div>
+              <div>
+                  <div className="leftone">
+                      Whats up
+                  </div>
+              </div>
+              <div>
+                  <div className="leftone">
+                      Hii How are you
+                  </div>
+              </div>
+              <div style={{display:'flex',justifyContent:'flex-end'}}>
+                  <div className="rightone">
+                      I am fine
+                  </div>
+              </div>
+              <div>
+                  <div className="leftone">
+                      Whats up
+                  </div>
+              </div>
+              <div>
+                  <div className="leftone">
+                      Hii How are you
+                  </div>
+              </div>
+              <div style={{display:'flex',justifyContent:'flex-end'}}>
+                  <div className="rightone">
+                      I am fine
+                  </div>
+              </div>
+              <div>
+                  <div className="leftone">
+                      Whats up
+                  </div>
+              </div>
+              <div>
+                  <div className="leftone">
+                      Hii How are you
+                  </div>
+              </div>
+              <div style={{display:'flex',justifyContent:'flex-end'}}>
+                  <div className="rightone">
+                      I am fine
+                  </div>
+              </div>
+              <div>
+                  <div className="leftone">
+                      Whats up
+                  </div>
+              </div> */}
+          </div>
+      
+    )
+  }
+})
+
 const ChatScreen = ( ({ChatSceenData}) => {
   const [CSData,handleCSData] = useState(ChatSceenData)
   console.log("CS DATA",CSData)
@@ -31,8 +143,7 @@ const ChatScreen = ( ({ChatSceenData}) => {
           </div>
         </div>
         <div style={{height: '79vh',padding:'20px'}}>
-          <Bubble/>
-
+          <ChatBubble CSData={CSData} />
         </div>
         <div className=''>
           <input type='text' style={{width: '132vh'}}></input>
@@ -104,7 +215,7 @@ const App = () => {
               <Chatheads chatheadsdata={chat_data} selectedid={selectedid} changeSelectedid={changeSelectedid} />
             </ul>
           </div>
-          <div className='col-9 p-0 primarycolor4 overflow-auto'>
+          <div className='col-9 p-0 primarycolor4'>
               <ChatScreen ChatSceenData={ChatScreenData}/>
           </div>
       </div>
@@ -112,5 +223,10 @@ const App = () => {
   );
 }
 
+// const App = () => {
+//   return(
+//     <Bubble/>
+//   )
+// }
 
 export default App;
