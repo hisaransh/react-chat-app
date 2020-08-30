@@ -83,7 +83,59 @@
       "fname": "Sam",
       "profilepic": "https://i.ibb.co/r5pvTQn/avataaars-2.png",
       "lastseen": "online",
-      "message": []
+      "message": [
+        {
+          "send": 0,
+          "msg": "when is next match"
+        },
+        {
+          "send": 1,
+          "msg": "on Monday"
+        },
+        {
+          "send": 1,
+          "msg": "probaby"
+        },
+        {
+          "send": 0,
+          "msg": "Will you watch"
+        },
+        {
+          "send": 1,
+          "msg": "yes if I complete all my meetings before match"
+        },
+        {
+          "send": 0,
+          "msg": "Then let's watch at my home"
+        },
+        {
+          "send": 0,
+          "msg": "we will order pizza"
+        },
+        {
+          "send": 1,
+          "msg": "Ok"
+        },
+        {
+          "send": 1,
+          "msg": "Will come ASAP"
+        },{
+          "send": 1,
+          "msg": "Also ask John to come"
+        },{
+          "send": 1,
+          "msg": "I think he would also be interested"
+        },{
+          "send": 0,
+          "msg": "Yes"
+        },{
+          "send": 1,
+          "msg": "already asked"
+        },{
+          "send": 1,
+          "msg": "he is coming"
+        }
+        ]
       
     },
     {
@@ -113,20 +165,110 @@
       "fname": "Dan",
       "profilepic": "https://i.ibb.co/3fhVKtQ/avataaars-4.png",
       "lastseen": "3 July 2020",
-      "message": []
+      "message": [
+        {
+          "send": 0,
+          "msg": "Please Complete and submit the Assignment"
+        },
+        {
+          "send": 1,
+          "msg": "I am not feeling well."
+        },
+        {
+          "send": 1,
+          "msg": "I would not be able to complete it by the time"
+        },
+        {
+          "send": 1,
+          "msg": "Please extend my submission date."
+        },
+        {
+          "send": 0,
+          "msg": "Let me see"
+        },
+        {
+          "send": 0,
+          "msg": "Ok then i am extending your date to saturday"
+        },
+        {
+          "send": 0,
+          "msg": "Complete it any how"
+        },
+        {
+          "send": 1,
+          "msg": "Yes, Will complete it"
+        },
+        {
+          "send": 0,
+          "msg": "take care"
+        }
+        ]
     },
     {
       "id": 6,
       "fname": "Tom",
       "profilepic": "https://i.ibb.co/2MhrHgF/avataaars-5.png",
-      "lastseen": "1 Jan 2020"
+      "lastseen": "1 Jan 2020",
+      "message": []
     },
     {
       "id": 7,
       "fname": "Jerry",
       "profilepic": "https://i.ibb.co/VLLf8wQ/avataaars-6.png",
       "lastseen": "online",
-      "message": []
+      "message": [
+        {
+          "send": 0,
+          "msg": "You going out"
+        },
+        {
+          "send": 1,
+          "msg": "Yes next month"
+        },
+        {
+          "send": 0,
+          "msg": "Where?"
+        },
+        {
+          "send": 1,
+          "msg": "To the Capital"
+        },
+        {
+          "send": 1,
+          "msg": "Do you want to come "
+        },
+        {
+          "send": 0,
+          "msg": "No"
+        },
+        {
+          "send": 0,
+          "msg": "Will you do me a favour"
+        },
+        {
+          "send": 1,
+          "msg": "Sure , Ask"
+        },
+        {
+          "send": 0,
+          "msg": "Bring me the accessories for BMW"
+        },{
+          "send": 1,
+          "msg": "Ok No problem"
+        },{
+          "send": 1,
+          "msg": "Mail me whatever you need"
+        },{
+          "send": 0,
+          "msg": "Yes"
+        },{
+          "send": 0,
+          "msg": "Will mail in 2-3 days"
+        },{
+          "send": 1,
+          "msg": "😀"
+        }
+        ]
     },
     {
       "id": 8,
