@@ -1,16 +1,31 @@
-import React , { useState, useEffect }  from 'react';
+import React , { useState, useEffect ,useRef}  from 'react';
 import './App.css';
 import './Bubble.css'
 import profile_pic from './images/profile_pic.png'
 import chat_data from './Data/chat_data.json'
 import Bubble from './Bubble'
+import send_icon from './images/send_icon.png'
+import { animateScroll } from "react-scroll";
 
 const ChatBubble = ( ({CSData}) => {
   const [chatsdata,handlechatsdata] = useState(CSData)
+
   console.log("CHATS DATA",chatsdata)
   useEffect(()=>{
     handlechatsdata(CSData)
+    
   },[CSData])
+  
+  useEffect(()=>{
+    scrollToBottom()
+  })
+
+  function scrollToBottom(){
+    animateScroll.scrollToBottom({
+        containerId: "ContainerElementID",
+        duration: 50,
+    });
+  }
 
   function ToMap(){
     const mp = chatsdata.message.map((x) => (
@@ -33,84 +48,9 @@ const ChatBubble = ( ({CSData}) => {
     )
   }else{
     return(
-      <div style={{padding:'10px',height:'75vh',overflowY:'scroll',display:'flex',flexDirection:'column'}}>
-        <ToMap/>
-              {/* <div>
-                  <div className="leftone">
-                      Hii How are you
-                  </div>
-              </div>
-              <div style={{display:'flex',justifyContent:'flex-end'}}>
-                  <div className="rightone">
-                      I am fine
-                  </div>
-              </div>
-              <div>
-                  <div className="leftone">
-                      Whats up
-                  </div>
-              </div>
-              <div>
-                  <div className="leftone">
-                      Hii How are you
-                  </div>
-              </div>
-              <div style={{display:'flex',justifyContent:'flex-end'}}>
-                  <div className="rightone">
-                      I am fine
-                  </div>
-              </div>
-              <div>
-                  <div className="leftone">
-                      Whats up
-                  </div>
-              </div>
-              <div>
-                  <div className="leftone">
-                      Hii How are you
-                  </div>
-              </div>
-              <div style={{display:'flex',justifyContent:'flex-end'}}>
-                  <div className="rightone">
-                      I am fine
-                  </div>
-              </div>
-              <div>
-                  <div className="leftone">
-                      Whats up
-                  </div>
-              </div>
-              <div>
-                  <div className="leftone">
-                      Hii How are you
-                  </div>
-              </div>
-              <div style={{display:'flex',justifyContent:'flex-end'}}>
-                  <div className="rightone">
-                      I am fine
-                  </div>
-              </div>
-              <div>
-                  <div className="leftone">
-                      Whats up
-                  </div>
-              </div>
-              <div>
-                  <div className="leftone">
-                      Hii How are you
-                  </div>
-              </div>
-              <div style={{display:'flex',justifyContent:'flex-end'}}>
-                  <div className="rightone">
-                      I am fine
-                  </div>
-              </div>
-              <div>
-                  <div className="leftone">
-                      Whats up
-                  </div>
-              </div> */}
-          </div>
+      <div id="ContainerElementID" style={{padding:'10px',height:'75vh',overflowY:'scroll',display:'flex',flexDirection:'column'}}>
+        <ToMap/>        
+      </div>
       
     )
   }
@@ -118,9 +58,23 @@ const ChatBubble = ( ({CSData}) => {
 
 const ChatScreen = ( ({ChatSceenData}) => {
   const [CSData,handleCSData] = useState(ChatSceenData)
-  console.log("CS DATA",CSData)
+  const [newMsg,handleNewMsg] = useState("")
 
   useEffect(() => {handleCSData(ChatSceenData)}, [ChatSceenData]);
+  function handleKeyDown(e){
+    if (e.key === 'Enter') {
+      if(newMsg != ''){
+        var dic = {
+          "send" : 1,
+          "msg" : newMsg
+        }
+        var TempCSData = CSData
+        TempCSData.message.push(dic)
+        handleCSData(TempCSData)
+        handleNewMsg("")
+      }
+    }
+  }
 
   if(CSData === null){
     return(
@@ -145,10 +99,10 @@ const ChatScreen = ( ({ChatSceenData}) => {
         <div style={{height: '79vh',padding:'20px'}}>
           <ChatBubble CSData={CSData} />
         </div>
-        <div className=''>
-          <input type='text' style={{width: '132vh'}}></input>
-          <button> Send</button>
+        <div>
+          <input type='text' style={{width: '140vh'}} value={newMsg} onChange={(e)=>handleNewMsg(e.target.value)} placeholder="Press enter to send" onKeyDown={(e) => handleKeyDown(e)}></input>
         </div>
+        
       </>  
     )
     }
@@ -205,7 +159,7 @@ const App = () => {
   return (
     <div className="container-fluid primarycolor1 alatafont d-flex align-items-stretch" style={{height:'100vh'}}>
       <div className='d-flex p-4 align-self-stretch row' style={{width:'200vh'}}>
-          <div className='col-3 p-0 primarycolor4 overflow-auto border-gray'>
+          <div className='col-3 p-0 primarycolor4 overflow-auto' style={{borderRight:'0.5px solid white'}}>
             <div className='chat-head primarycolor2'>
               <div className='ml-2'>
                 Chats
@@ -222,11 +176,5 @@ const App = () => {
     </div>
   );
 }
-
-// const App = () => {
-//   return(
-//     <Bubble/>
-//   )
-// }
 
 export default App;

@@ -82,7 +82,8 @@
       "id": 3,
       "fname": "Sam",
       "profilepic": "https://i.ibb.co/r5pvTQn/avataaars-2.png",
-      "lastseen": "online"
+      "lastseen": "online",
+      "message": []
       
     },
     {
@@ -109,9 +110,10 @@
     },
     {
       "id": 5,
-      "fname": "Dexter",
+      "fname": "Dan",
       "profilepic": "https://i.ibb.co/3fhVKtQ/avataaars-4.png",
-      "lastseen": "3 July 2020"
+      "lastseen": "3 July 2020",
+      "message": []
     },
     {
       "id": 6,
@@ -123,13 +125,15 @@
       "id": 7,
       "fname": "Jerry",
       "profilepic": "https://i.ibb.co/VLLf8wQ/avataaars-6.png",
-      "lastseen": "online"
+      "lastseen": "online",
+      "message": []
     },
     {
       "id": 8,
       "fname": "rachel",
       "profilepic": "https://i.ibb.co/rtGPr9m/avataaars-7.png",
-      "lastseen": "27 Aug 2020"
+      "lastseen": "27 Aug 2020",
+      "message": []
     }
   ]
 }
