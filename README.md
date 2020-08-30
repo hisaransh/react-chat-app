@@ -14,10 +14,10 @@ http://sara-chat.surge.sh/
 # Run
 Clone the repository
 
-Go to the project directory and run
+Go to the project directory and enter
 
 `npm install`
 
-after installing, run
+after installing, enter
 
 `npm start`
